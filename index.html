@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080706">
+<title>Глэмпинг у озера</title>
+<!--seo-->
+<meta name="description" content="Четыре домика у лесного озера, баня на дровах, сапы и завтраки. Расчёт стоимости брони онлайн. Демо-сайт, компания вымышленная.">
+<link rel="canonical" href="https://souwerop-lab.github.io/sosnovyi-bereg/index.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Сосновый берег">
+<meta property="og:title" content="Сосновый берег — глэмпинг у лесного озера: домики, баня, сапы">
+<meta property="og:description" content="Четыре домика у лесного озера, баня на дровах, сапы и завтраки. Расчёт стоимости брони онлайн. Демо-сайт, компания вымышленная.">
+<meta property="og:image" content="https://souwerop-lab.github.io/sosnovyi-bereg/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080706">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Сосновый берег","url":"https://souwerop-lab.github.io/sosnovyi-bereg/index.html","logo":"https://souwerop-lab.github.io/sosnovyi-bereg/assets/og.jpg"}]}</script>
+<!--/seo-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+/* тема до отрисовки: сохранённый выбор, иначе по времени посетителя (7:00–19:00 день) */
+(function(){var t=null;try{t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('theme');}catch(e){}
+if(t!=='day'&&t!=='night'){var h=new Date().getHours();t=(h>=7&&h<19)?'day':'night';}
+document.documentElement.dataset.theme=t;})();
+</script>
+<link rel="stylesheet" href="style.css?v=mwqecxsu">
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="logo" href="#hero"><svg class="logo__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 6 10h3l-4 6h4l-3 5h12l-3-5h4l-4-6h3z"/></svg><span data-brand></span></a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#cabins">Домики</a>
+    <a href="#services">Услуги</a>
+    <a href="#booking">Бронь</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#way">Как добраться</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <button class="tgl" id="themeBtn" type="button" role="switch" aria-checked="false" aria-label="Тема: день или ночь">
+    <svg class="tgl__i tgl__i--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.9 1.9M16.8 16.8l1.9 1.9M5.3 18.7l1.9-1.9M16.8 7.2l1.9-1.9"/></svg>
+    <svg class="tgl__i tgl__i--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+    <i class="tgl__thumb" aria-hidden="true"></i>
+  </button>
+  <a class="btn btn--sm" href="#booking"><span class="lg">Забронировать</span><span class="sm">Бронь</span></a>
+</header>
+
+<main>
+<!-- ПЕРВЫЙ ЭКРАН -->
+<section class="hero" id="hero">
+  <div class="hero__media" id="heroMedia">
+    <div class="stage" id="stage">
+      <img class="im im-n" src="assets/hero.jpg" alt="Домик-шалаш у озера: ночь, тёплый свет в окнах" data-t="night">
+      <img class="im im-d" src="assets/hero-day.jpg" alt="Домик-шалаш у озера: утро, лёгкий туман" data-t="day">
+      <video class="hero__video" poster="assets/hero.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+      <i class="glow g1"></i><i class="glow g2"></i><i class="glow g3"></i><i class="glow g4"></i>
+      <div class="fog" aria-hidden="true"></div>
+    </div>
+    <div class="stars" id="stars" aria-hidden="true"></div>
+    <div class="hero__shade hero__shade--n"></div>
+    <div class="hero__shade hero__shade--d"></div>
+    <div class="moon" aria-hidden="true"></div>
+    <div class="tint" id="tint" aria-hidden="true"></div>
+  </div>
+  <div class="hero__body">
+    <h1 data-brand-h1></h1>
+    <p class="hero__lead">Глэмпинг на берегу <span data-lake-gen></span>. Четыре домика, баня на дровах, сапы и завтраки. 140 км от города.</p>
+    <div class="hero__cta">
+      <a class="btn" href="#booking">Рассчитать бронь</a>
+      <a class="btn btn--ghost" href="#cabins">Смотреть домики</a>
+    </div>
+  </div>
+  <form class="quick" id="quick" novalidate aria-label="Быстрый выбор дат">
+    <label>Заезд<input type="date" id="qIn"></label>
+    <label>Выезд<input type="date" id="qOut"></label>
+    <label>Гости
+      <select id="qG"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+    </label>
+    <button class="btn" type="submit">Проверить цену</button>
+  </form>
+</section>
+
+<!-- ФАКТЫ -->
+<section class="facts" aria-label="Кратко">
+  <dl>
+    <div><dt>Заезд / выезд</dt><dd>с 15:00 / до 12:00</dd></div>
+    <div><dt>Из города</dt><dd>140 км, около 2 часов</dd></div>
+    <div><dt>Домиков</dt><dd>4, до 6 гостей</dd></div>
+    <div><dt>Цена за ночь</dt><dd>от 9 500 ₽</dd></div>
+  </dl>
+</section>
+
+<!-- ДОМИКИ -->
+<section class="sec" id="cabins">
+  <div class="wrap">
+    <header class="sec__head">
+      <h2>Домики</h2>
+      <p>Четыре типа размещения на одном берегу. Цена указана за ночь; в выходные (пятница и суббота) она выше.</p>
+    </header>
+    <div class="cabins" id="cabinList"></div>
+  </div>
+</section>
+
+<!-- УСЛУГИ -->
+<section class="sec sec--alt" id="services">
+  <div class="wrap services">
+    <header class="sec__head">
+      <h2>Что включено и что можно добавить</h2>
+      <p>Базовый набор входит в цену. Дополнительные услуги выбираются при брони.</p>
+    </header>
+    <div class="services__cols">
+      <div>
+        <h3>Входит в стоимость</h3>
+        <ul class="plain">
+          <li>Постельное бельё, полотенца, посуда</li>
+          <li>Дрова для печи и костровой зоны</li>
+          <li>Wi-Fi на ресепшене</li>
+          <li>Парковка у въезда</li>
+          <li>Спасательные жилеты и мангальный набор</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Дополнительно</h3>
+        <ul class="price-list">
+          <li><div><b>Баня на дровах</b><span>Топится 2 часа, веники, купель. Заказ за день до заезда.</span></div><em>4 500 ₽ за вечер</em></li>
+          <li><div><b>Завтраки</b><span>Сырники, каша, яйца, чай и кофе. Подача на террасе в 9:00.</span></div><em>700 ₽ с гостя</em></li>
+          <li><div><b>Сапы, 2 доски</b><span>Жилеты и вёсла в комплекте. Прокат на весь срок проживания.</span></div><em>1 500 ₽</em></li>
+          <li><div><b>Трансфер со станции</b><span>В пятницу и воскресенье, по записи.</span></div><em>1 200 ₽ с человека</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- БРОНЬ -->
+<section class="sec" id="booking">
+  <div class="wrap">
+    <header class="sec__head">
+      <h2>Расчёт брони</h2>
+      <p>Выберите домик, даты и гостей. Итог с разбивкой по ночам и услугам считается сразу.</p>
+    </header>
+    <div class="panel">
+      <form class="panel__form" id="calcForm" novalidate>
+        <fieldset>
+          <legend>Домик</legend>
+          <div class="pick" id="pickCabin"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Даты</legend>
+          <div class="dates">
+            <label>Заезд<input type="date" id="dIn" required></label>
+            <label>Выезд<input type="date" id="dOut" required></label>
+          </div>
+          <p class="hint" id="dateHint"></p>
+        </fieldset>
+        <fieldset>
+          <legend>Гости</legend>
+          <div class="guests">
+            <div class="stepper">
+              <button type="button" id="gMinus" aria-label="Меньше гостей">−</button>
+              <output id="gVal">2</output>
+              <button type="button" id="gPlus" aria-label="Больше гостей">+</button>
+            </div>
+            <p class="hint" id="gHint"></p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Дополнительно</legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" id="oBanya"><i></i><span><b>Баня на дровах</b><small>4 500 ₽ за вечер</small></span></label>
+            <label class="opt"><input type="checkbox" id="oBreak"><i></i><span><b>Завтраки</b><small>700 ₽ с гостя за утро</small></span></label>
+            <label class="opt"><input type="checkbox" id="oSup"><i></i><span><b>Сапы, 2 доски</b><small>1 500 ₽ на весь срок</small></span></label>
+          </div>
+        </fieldset>
+      </form>
+      <aside class="panel__sum" aria-live="polite">
+        <div class="sum__photo" id="sumPhoto"></div>
+        <div class="sum__body">
+          <h3 id="sCabin">—</h3>
+          <p class="sum__meta" id="sMeta"></p>
+          <ul class="sum__rows" id="sRows"></ul>
+          <div class="sum__total"><span>Итого</span><strong id="sTotal">0 ₽</strong></div>
+          <p class="sum__note" id="sNote"></p>
+          <button class="btn btn--wide" id="bookBtn" type="button">Отправить заявку</button>
+          <p class="fine">Предоплата 30%, остальное при заезде. Демо: цены и даты придуманы.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+<section class="sec sec--alt" id="gallery">
+  <div class="wrap">
+    <header class="sec__head">
+      <h2>Территория</h2>
+      <p>Баня, причал, костровая зона и озеро. Нажмите на фото, чтобы открыть крупно.</p>
+    </header>
+    <div class="mosaic" id="mosaic"></div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <header class="sec__head">
+      <h2>Отзывы гостей</h2>
+      <p>Пример оформления: в демо-проекте отзывы вымышленные.</p>
+    </header>
+    <div class="reviews">
+      <figure class="rev rev--main">
+        <blockquote>Брали «Ель» на выходные. В домике тепло, печь растапливается быстро, из окна видно озеро. Баню заказали заранее, к вечеру всё было готово.</blockquote>
+        <figcaption>Анна, Москва <span class="tag">пример</span></figcaption>
+      </figure>
+      <figure class="rev">
+        <blockquote>Приезжали семьёй в «Семейный». Две спальни и кухня, детям хватило места. Сапы выдали с жилетами.</blockquote>
+        <figcaption>Дмитрий, Тула <span class="tag">пример</span></figcaption>
+      </figure>
+      <figure class="rev">
+        <blockquote>Дорога от трассы по грунтовке нормальная, доехали на обычной машине. Заселили сразу в 15:00.</blockquote>
+        <figcaption>Ольга, Калуга <span class="tag">пример</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ПРАВИЛА -->
+<section class="sec sec--alt" id="rules">
+  <div class="wrap rules">
+    <header class="sec__head">
+      <h2>Правила проживания</h2>
+    </header>
+    <ul class="rule-list">
+      <li><b>Заезд и выезд</b><span>Заезд с 15:00, выезд до 12:00. Ранний заезд и поздний выезд обсуждаются заранее и зависят от занятости домика.</span></li>
+      <li><b>Тишина</b><span>С 23:00 до 8:00 тишина. Колонки и фейерверки на территории не разрешены.</span></li>
+      <li><b>Огонь</b><span>Костры и мангалы только в обустроенных местах. Дрова входят в стоимость.</span></li>
+      <li><b>Животные</b><span>Допускаются в домике «Ель», 1 000 ₽ за ночь. На территории только на поводке.</span></li>
+      <li><b>Дети</b><span>Дети до 6 лет проживают бесплатно без отдельного места, в пределах вместимости домика.</span></li>
+      <li><b>Курение</b><span>В домиках и бане не курят. Для курения отведены места на террасах.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- КАК ДОБРАТЬСЯ -->
+<section class="sec" id="way">
+  <div class="wrap way">
+    <header class="sec__head">
+      <h2>Как добраться</h2>
+      <p>Урочище Сосновое, <span data-lake></span> (вымышленное место). Последние 6 км по грунтовой дороге, подойдёт обычный легковой автомобиль.</p>
+    </header>
+    <ol class="route">
+      <li><b>Город → трасса</b><span>100 км, около 1 часа 20 минут</span></li>
+      <li><b>Поворот у лесничества</b><span>Налево, дальше указатели «<span data-brand></span>»</span></li>
+      <li><b>Грунтовая дорога</b><span>6 км, около 15 минут</span></li>
+      <li><b>Шлагбаум и ресепшен</b><span>Администратор встречает с 15:00, код шлагбаума придёт накануне</span></li>
+    </ol>
+    <p class="way__note">Без машины: трансфер со станции в пятницу и воскресенье, 1 200 ₽ с человека, по записи. Связь в домиках слабая, Wi-Fi работает на ресепшене.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec--alt" id="faq">
+  <div class="wrap faq">
+    <header class="sec__head">
+      <h2>Частые вопросы</h2>
+    </header>
+    <div class="acc" id="acc">
+      <div class="acc__item"><button type="button" aria-expanded="false"><span>Можно ли отменить бронь?</span><i></i></button><div class="acc__body"><div><p>Отмена за 7 дней до заезда и раньше возвращает предоплату полностью. Позже предоплата не возвращается. Условия демонстрационные.</p></div></div></div>
+      <div class="acc__item"><button type="button" aria-expanded="false"><span>Как оплатить проживание?</span><i></i></button><div class="acc__body"><div><p>Предоплата 30% по ссылке после подтверждения заявки, остальное при заезде картой или наличными.</p></div></div></div>
+      <div class="acc__item"><button type="button" aria-expanded="false"><span>Есть ли питание на территории?</span><i></i></button><div class="acc__body"><div><p>Завтраки заказываются при брони. На остальные приёмы пищи в домиках есть чайная зона, в «Семейном» полноценная кухня. Мангальный набор выдаём бесплатно.</p></div></div></div>
+      <div class="acc__item"><button type="button" aria-expanded="false"><span>Что взять с собой?</span><i></i></button><div class="acc__body"><div><p>Тёплую одежду на вечер, обувь для тропы, средство от комаров, купальный костюм. Бельё, полотенца и посуду выдаём.</p></div></div></div>
+      <div class="acc__item"><button type="button" aria-expanded="false"><span>Работает ли мобильная связь?</span><i></i></button><div class="acc__body"><div><p>В домиках сигнал нестабильный. На ресепшене работает Wi-Fi.</p></div></div></div>
+      <div class="acc__item"><button type="button" aria-expanded="false"><span>Можно ли приехать большой компанией?</span><i></i></button><div class="acc__body"><div><p>Максимальная вместимость домика 6 гостей. Для компании можно забронировать несколько домиков, напишите нам, подберём даты.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ФОРМА ЗАЯВКИ -->
+<section class="sec" id="contact">
+  <div class="wrap contact">
+    <header class="sec__head">
+      <h2>Остались вопросы</h2>
+      <p>Оставьте контакты, администратор ответит в течение дня. Или напишите сразу: <a href="tel:+79000000000" data-goal="phone">+7 900 000-00-00</a>, <a href="https://t.me/example" data-goal="telegram">Telegram</a>.</p>
+    </header>
+    <form class="form" id="askForm" novalidate>
+      <label>Имя<input type="text" id="aName" autocomplete="name" placeholder="Как к вам обращаться"></label>
+      <label>Телефон или Telegram<input type="text" id="aPhone" autocomplete="tel" placeholder="+7 900 000-00-00"></label>
+      <label class="wide">Вопрос<textarea id="aText" rows="3" placeholder="Например, свободен ли «Причал» на выходные"></textarea></label>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent"><input type="checkbox" id="aOk"><span>Согласен на обработку персональных данных по <a href="privacy.html" target="_blank" rel="noopener">политике</a></span></label>
+      <p class="err" id="aErr" role="alert"></p>
+      <button class="btn" type="submit" id="aSend">Отправить</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__logo" data-brand></p>
+    <ul class="foot__links">
+      <li><a href="tel:+79000000000" data-goal="phone">+7 900 000-00-00</a></li>
+      <li><a href="https://t.me/example" data-goal="telegram">Telegram</a></li>
+      <li><a href="rules.html">Условия брони и отмены</a></li>
+      <li><a href="privacy.html">Политика обработки персональных данных</a></li>
+    </ul>
+    <p class="foot__legal">ИП Соснов Сергей Петрович (пример) · ИНН 000000000000 · ОГРНИП 000000000000000</p>
+    <p>Демо-проект, компания вымышленная. Цены, даты, адреса, реквизиты и отзывы придуманы для портфолио.</p>
+  </div>
+</footer>
+
+<!-- ЗАЯВКА ИЗ РАСЧЁТА -->
+<dialog class="modal" id="modal" aria-labelledby="mTitle">
+  <form method="dialog" id="bookForm" novalidate>
+    <button class="modal__x" type="button" id="mClose" aria-label="Закрыть">×</button>
+    <div id="mStep1">
+      <h3 id="mTitle">Заявка на бронь</h3>
+      <p class="modal__sum" id="mSum"></p>
+      <label>Имя<input type="text" id="fName" autocomplete="name" placeholder="Как к вам обращаться"></label>
+      <label>Телефон<input type="tel" id="fPhone" autocomplete="tel" inputmode="tel" placeholder="+7 900 000-00-00"></label>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent"><input type="checkbox" id="fOk"><span>Согласен на обработку персональных данных по <a href="privacy.html" target="_blank" rel="noopener">политике</a></span></label>
+      <p class="err" id="fErr" role="alert"></p>
+      <button class="btn btn--wide" type="submit" id="fSend">Отправить заявку</button>
+      <p class="fine">Бронь подтверждается после предоплаты 30%. <a href="rules.html" target="_blank" rel="noopener">Условия брони и отмены</a></p>
+    </div>
+    <div id="mStep2" hidden>
+      <h3>Заявка принята</h3>
+      <p id="mDone"></p>
+      <button class="btn btn--ghost" type="button" id="mOk">Закрыть</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="lightbox" id="lightbox" aria-label="Фото">
+  <button class="modal__x" type="button" id="lbClose" aria-label="Закрыть">×</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
+
+<script src="app.js?v=mwqecxsu"></script>
+</body>
+</html>
